@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShopVerse - Gaming</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 30px;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        h1 { margin-bottom: 25px; color: #1a1a1a; }
+        
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            padding-top: 10px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 { margin: 10px 0; color: #2d3748; }
+        .card p { font-weight: bold; color: #4a5568; margin-bottom: 15px; }
+
+   
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-add {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 6px;
+            flex: 2; 
+        }
+        .btn-add:hover { background: #1d4ed8; }
+
+        
+        .btn-remove {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 6px;
+            flex: 1;
+        }
+        .btn-remove:hover { background: #bd2130; }
+
+        a { text-decoration: none; color: #2563eb; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html">← Back Home</a>
+    <h1><b>Your Cart</b></h1>
+    
+    <div class="product-list">
+        <div class="card">
+            <h3>Gaming PC</h3>
+            <p>Price: $1200</p>
+            <div class="button-group">
+                <button class="btn-add" onclick="saveToCart('pc-1', 'Gaming PC', 1200)">Add</button>
+                <button class="btn-remove" onclick="removeFromCart('pc-1', 'Gaming PC')">X</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Gaming Mouse</h3>
+            <p>Price: $50</p>
+            <div class="button-group">
+                <button class="btn-add" onclick="saveToCart('mouse-1', 'Gaming Mouse', 50)">Add</button>
+                <button class="btn-remove" onclick="removeFromCart('mouse-1', 'Gaming Mouse')">X</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Gaming Monitor</h3>
+            <p>Price: $500</p>
+            <div class="button-group">
+                <button class="btn-add" onclick="saveToCart('monitor-1', 'Gaming Monitor', 500)">Add</button>
+                <button class="btn-remove" onclick="removeFromCart('monitor-1', 'Gaming Monitor')">X</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>Gaming Keyboard</h3>
+            <p>Price: $100</p>
+            <div class="button-group">
+                <button class="btn-add" onclick="saveToCart('keyboard-1', 'Gaming Keyboard', 100)">Add</button>
+                <button class="btn-remove" onclick="removeFromCart('keyboard-1', 'Gaming Keyboard')">X</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Gaming Chair</h3>
+            <p>Price: $650</p>
+            <div class="button-group">
+                <button class="btn-add" onclick="saveToCart('Chair-1', 'Gaming Chair', 650)">Add</button>
+                <button class="btn-remove" onclick="removeFromCart('Chair-1', 'Gaming Chair')">X</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Gaming Controller</h3>
+            <p>Price: $150</p>
+            <div class="button-group">
+                <button class="btn-add" onclick="saveToCart('Controller-1', 'Gaming Controller', 150)">Add</button>
+                <button class="btn-remove" onclick="removeFromCart('Controller-1', 'Gaming Controller')">X</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>PS5</h3>
+            <p>Price: $650</p>
+            <div class="button-group">
+                <button class="btn-add" onclick="saveToCart('PS5-1', 'PS5', 650)">Add</button>
+                <button class="btn-remove" onclick="removeFromCart('PS5-1', 'PS5')">X</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>Iphone 17 pro max</h3>
+            <p>Price: $1050</p>
+            <div class="button-group">
+                <button class="btn-add" onclick="saveToCart('Iphone-1', 'Iphone 17 pro max', 1050)">Add</button>
+                <button class="btn-remove" onclick="removeFromCart('Iphone-1', 'Iphone 17 pro max')">X</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Samsung Galaxy S25 Ultra</h3>
+            <p>Price: $1050</p>
+            <div class="button-group">
+                <button class="btn-add" onclick="saveToCart('Samsung-1', 'Samsung Galaxy S25 Ultra', 1050)">Add</button>
+                <button class="btn-remove" onclick="removeFromCart('Samsung-1', 'Samsung Galaxy S25 Ultra')">X</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>Laptop</h3>
+            <p>Price: $650</p>
+            <div class="button-group">
+                <button class="btn-add" onclick="saveToCart('Laptop-1', 'Laptop', 650)">Add</button>
+                <button class="btn-remove" onclick="removeFromCart('Laptop-1', 'Laptop')">X</button>
+            </div>
+        </div>
+
+         <div class="card">
+            <h3>Tab</h3>
+            <p>Price: $200</p>
+            <div class="button-group">
+                <button class="btn-add" onclick="saveToCart('Tab-1', 'Tab', 200)">Add</button>
+                <button class="btn-remove" onclick="removeFromCart('Tab-1', 'Tab')">X</button>
+            </div>
+        </div>
+
+         <div class="card">
+            <h3>Smart Watch</h3>
+            <p>Price: $200</p>
+            <div class="button-group">
+                <button class="btn-add" onclick="saveToCart('Watch-1', 'Smart watch', 200)">Add</button>
+                <button class="btn-remove" onclick="removeFromCart('Watch-1', 'Smart Watch')">X</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+   
+        function saveToCart(id, name, price) {
+            let myCart = JSON.parse(localStorage.getItem('myCartData')) || [];
+            let foundItem = myCart.find(item => item.id === id);
+
+            if (foundItem) {
+                foundItem.quantity += 1; 
+            } else {
+                myCart.push({ id, name, price, quantity: 1 }); 
+            }
+            localStorage.setItem('myCartData', JSON.stringify(myCart));
+            alert(name + " added!");
+        }
+
+
+        function removeFromCart(id, name) {
+            
+            let myCart = JSON.parse(localStorage.getItem('myCartData')) || [];
+            
+            
+            let foundItem = myCart.find(item => item.id === id);
+
+            if (foundItem) {
+                
+                foundItem.quantity -= 1;
+
+             
+                if (foundItem.quantity <= 0) {
+                    myCart = myCart.filter(item => item.id !== id);
+                }
+
+            
+                localStorage.setItem('myCartData', JSON.stringify(myCart));
+                alert(name + " removed!");
+            } else {
+            
+                alert(name + " is not in your cart!");
+            }
+        }
+    </script>
+</body>
+</html>
