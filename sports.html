@@ -3,25 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>ShopVerse-Sports</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #000000; 
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 40px 5%;
+        }
+        .sports-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;    
+            gap: 30px;          
+            justify-content: center; 
+        }
+
+        .sports-item {
+            background: #111111; 
+            border: 1px solid #333333; 
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 240px;       
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .sports-item:hover {
+            transform: translateY(-8px);
+            border-color: #f3a847;
+        }
+
+        .sports-item p {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .sports-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain; 
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .btn-cart {
+            background: #f0c14b;
+            border: 1px solid #a88734;
+            color: #111111;
+        }
+
+        .btn-cart:hover {
+            background: #eeb933;
+        }
+
+        .btn-buy {
+            background: #ed923b;
+            border: 1px solid #a61;
+            color: #ffffff;
+        }
+
+        .btn-buy:hover {
+            background: #e48122;
+        }
+    </style>
 </head>
 <body>
-     <p><b>Football</b></p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQoQCh6HJw6w-gQFrM5JHQK29g9AdwE9njfQWhv2QWMQ&s=10"height="200"><br>
-    <a href="cart.html">Add to cart</a><br>
-    <a href="buy.html" >Buy the item</a><br>
-    <p><b>Basketball</b></p>
-    <img src="  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtIbAaP38nnN33Kmtpjh4QrppLXmyRa6wT71l-IL2b3Q&s=10"height="200"><br>
-    <a href="cart.html">Add to cart</a><br>
-    <a href="buy.html" >Buy the item</a><br>
-    <p><b>Cricket Set</b></p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEpwjKPdsvy5VMqlA-8zKhmi4M5l3PY-65akPV1Gallw&s=10"height="200"><br>
-    <a href="cart.html">Add to cart</a><br>
-    <a href="buy.html" >Buy the item</a><br>
-    <p><b>American Football</b></p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHX8ywUBXulpQ5sQvVrcBmHehQY66_9gLU_aXPlc1s4w&s=10"height="200"><br>
-     <a href="cart.html">Add to cart</a><br>
-    <a href="buy.html" >Buy the item</a><br>
+
+    <div class="sports-container">
+    
+        <div class="sports-item">
+            <p><b>Football</b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQoQCh6HJw6w-gQFrM5JHQK29g9AdwE9njfQWhv2QWMQ&s=10">
+            <a href="cart.html" class="btn btn-cart">Add to cart</a>
+            <a href="buy.html" class="btn btn-buy">Buy the item</a>
+        </div>
+
+        <div class="sports-item">
+            <p><b>Basketball</b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtIbAaP38nnN33Kmtpjh4QrppLXmyRa6wT71l-IL2b3Q&s=10">
+            <a href="cart.html" class="btn btn-cart">Add to cart</a>
+            <a href="buy.html" class="btn btn-buy">Buy the item</a>
+        </div>
+
+        <div class="sports-item">
+            <p><b>Cricket Set</b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEpwjKPdsvy5VMqlA-8zKhmi4M5l3PY-65akPV1Gallw&s=10">
+            <a href="cart.html" class="btn btn-cart">Add to cart</a>
+            <a href="buy.html" class="btn btn-buy">Buy the item</a>
+        </div>
+
+        <div class="sports-item">
+            <p><b>American Football</b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHX8ywUBXulpQ5sQvVrcBmHehQY66_9gLU_aXPlc1s4w&s=10">
+            <a href="cart.html" class="btn btn-cart">Add to cart</a>
+            <a href="buy.html" class="btn btn-buy">Buy the item</a>
+        </div>
+
+    </div>
+    
 </body>
 </html>

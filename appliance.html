@@ -3,37 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>ShopVerse-Appliances</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #000000; 
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 40px 5%;
+        }
+
+        .appliances-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;    
+            gap: 30px;          
+            justify-content: center; 
+        }
+
+        .appliance-item {
+            background: #111111; 
+            border: 1px solid #333333; 
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 240px;       
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .appliance-item:hover {
+            transform: translateY(-8px);
+            border-color: #f3a847;
+        }
+
+        .appliance-item p {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .appliance-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain; 
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .btn-cart {
+            background: #f0c14b;
+            border: 1px solid #a88734;
+            color: #111111;
+        }
+
+        .btn-cart:hover {
+            background: #eeb933;
+        }
+
+        .btn-buy {
+            background: #ed923b;
+            border: 1px solid #a61;
+            color: #ffffff;
+        }
+
+        .btn-buy:hover {
+            background: #e48122;
+        }
+    </style>
 </head>
 <body>
-      <p><b>Fridge</b></p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn5kFN_ey6rExlZxMZqshDj6Qrx1B-k6s-ouvpqu5ZSA&s=10"height="200"><br>
-    <a href="cart.html">Add to cart</a><br>
-    <a href="buy.html" >Buy the item</a><br>
-    <p><b>Washing Machine</b></p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzb43m8_E5ghC-iQVmT1WCL8OCxGO_svEqudNYsd90tA&s=10"height="200"><br>
-    <a href="cart.html">Add to cart</a><br>
-    <a href="buy.html" >Buy the item</a><br>
-    <p><b>Pan</b></p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkjHQ0_qAmYGRX2NQ2s3kKyy9OX_FmDuBNjzsoHgG0nA&s=10"height="200"><br>
-    <a href="cart.html">Add to cart</a><br>
-    <a href="buy.html" >Buy the item</a><br>
-    <p><b>Oven</b></p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUb0PHr1F-ShxkvQSPtKmxICoOalLuprKsjGp13qUNPw&s=10"height="200"><br>
-     <a href="cart.html">Add to cart</a><br>
-    <a href="buy.html" >Buy the item</a><br>
-    <p><b>Microwave</b></p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrBdm-Sgr1-vJzy5O2aXZ01Wv8FXmEZB_BamY8GRkMiQ&s=10h"height="200"><br>
-    <a href="cart.html">Add to cart</a><br>
-    <a href="buy.html" >Buy the item</a><br>
-    <p><b>Chimney</b></p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMFCLNW562C3H3vdpO4M5Eye98IwT7mQu9IGA-kVzM3A&s=10"height="200"><br>
-    <a href="cart.html">Add to cart</a><br>
-    <a href="buy.html" >Buy the item</a><br>
-    <P><B>Electic Gas</B></P>
-    <img src="https://i.pinimg.com/736x/20/71/14/207114a6c9372bffba1a04ebe95f2b01.jpg"height="200"><br>
-    <a href="cart.html">Add to cart</a><br>
-    <a href="buy.html" >Buy the item</a><br>
+
+    <div class="appliances-container">
+    
+        <div class="appliance-item">
+            <p><b>Fridge</b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn5kFN_ey6rExlZxMZqshDj6Qrx1B-k6s-ouvpqu5ZSA&s=10">
+            <a href="cart.html" class="btn btn-cart">Add to cart</a>
+            <a href="buy.html" class="btn btn-buy">Buy the item</a>
+        </div>
+
+        <div class="appliance-item">
+            <p><b>Washing Machine</b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzb43m8_E5ghC-iQVmT1WCL8OCxGO_svEqudNYsd90tA&s=10">
+            <a href="cart.html" class="btn btn-cart">Add to cart</a>
+            <a href="buy.html" class="btn btn-buy">Buy the item</a>
+        </div>
+
+        <div class="appliance-item">
+            <p><b>Pan</b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkjHQ0_qAmYGRX2NQ2s3kKyy9OX_FmDuBNjzsoHgG0nA&s=10">
+            <a href="cart.html" class="btn btn-cart">Add to cart</a>
+            <a href="buy.html" class="btn btn-buy">Buy the item</a>
+        </div>
+
+        <div class="appliance-item">
+            <p><b>Oven</b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUb0PHr1F-ShxkvQSPtKmxICoOalLuprKsjGp13qUNPw&s=10">
+            <a href="cart.html" class="btn btn-cart">Add to cart</a>
+            <a href="buy.html" class="btn btn-buy">Buy the item</a>
+        </div>
+
+        <div class="appliance-item">
+            <p><b>Microwave</b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrBdm-Sgr1-vJzy5O2aXZ01Wv8FXmEZB_BamY8GRkMiQ&s=10">
+            <a href="cart.html" class="btn btn-cart">Add to cart</a>
+            <a href="buy.html" class="btn btn-buy">Buy the item</a>
+        </div>
+
+        <div class="appliance-item">
+            <p><b>Chimney</b></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMFCLNW562C3H3vdpO4M5Eye98IwT7mQu9IGA-kVzM3A&s=10">
+            <a href="cart.html" class="btn btn-cart">Add to cart</a>
+            <a href="buy.html" class="btn btn-buy">Buy the item</a>
+        </div>
+
+        <div class="appliance-item">
+            <p><b>Electric Gas</b></p>
+            <img src="https://i.pinimg.com/736x/20/71/14/207114a6c9372bffba1a04ebe95f2b01.jpg">
+            <a href="cart.html" class="btn btn-cart">Add to cart</a>
+            <a href="buy.html" class="btn btn-buy">Buy the item</a>
+        </div>
+
+    </div>
+    
 </body>
 </html>
