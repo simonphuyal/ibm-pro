@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ShopVerse</title>
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('signinStatus') === 'success') {
+            alert("Sign in complete! Welcome to ShopVerse.");
+            localStorage.removeItem('signinStatus');
+        }
+    });
+</script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo-area">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXq2IoruqsIcgITRI6N0eMX3W349FZWAaUruSduuHCw&s" height="100" width="200" alt="Logo">
+        <h1>ShopVerse</h1>
+    </div>
+
+    <div class="menu-area">
+        <a href="cart.html" class="nav-link">Cart</a>
+        <a href="signin.html" class="nav-link">Sign in</a>
+    </div>
+    </nav>
+    <h1>Classification of our products</h1><br>
+   <div class="menu-container">
+    
+    <div class="menu-item">
+      <a href="gaming.html">Gaming</a>
+      <img src="https://th.bing.com/th/id/OIP.99K1p1RFlnwRFwyswpLAYAHaE8?w=279&h=186&c=7&r=0&o=7&pid=1.7&rm=3">
+    </div>
+
+    <div class="menu-item">
+      <a href="device.html">Devices</a>
+      <img src="https://www.androidauthority.com/wp-content/uploads/2022/12/EoY-2022-phone-collage-angled.jpg">
+    </div>
+
+    <div class="menu-item">
+      <a href="appliance.html">Daily Appliances</a>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoHXr6TSwh_RuAVcfgAy8xuj5qof4PLfjqJ_UKTXQr7Q&s=10">
+    </div>
+
+    <div class="menu-item">
+      <a href="furniture.html">Furniture Items</a>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-FL0VDVZ6vitYsUIvpA5IYjmGMQ5qnUNNLYV0C4MGcQ&s=10">
+    </div>
+
+    <div class="menu-item">
+      <a href="sports.html">Sport</a>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk-dUb4OQLiV3U1QuK8WXov1_CT-n_2Y7qXDm6CWrACA&s=10">
+    </div>
+
+  </div>
+    <header><b>Why to shop with us?</b></header>
+    <p class="why-us-intro"><i>Our website provides our users a very advanced system with no mistakes. There are some points that make our website different:</i></p>
+    
+    <div class="why-us-grid">
+        <div class="feature-card">
+            <i>User-friendly</i>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHprCUwDmBBHhJFUklNWog3BQffisFYjaOmh2INodDaQ&s=10" height="200">
+        </div>
+        
+        <div class="feature-card">
+            <i>Home-delivery</i>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNCzxGBQjZoymYS90PfxAJPQE3X4t2b_F8GKEZ-B1WTQ&s=10" height="200">
+        </div>
+        
+        <div class="feature-card">
+            <i>Secure</i>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ_POzbLSqVffnc7QvnJTay_-VZL3fyKtswYj_MJe-Jg&s=10" height="200">
+        </div>
+        
+        <div class="feature-card">
+            <i>Cost-effective</i>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQymrQ3l5ISxG_6TuTC8qWzofMiQ0EceYELEldxrmNbDw&s=10" height="200">
+        </div>
+    </div>
+    <hr>
+    <header>About us</header>
+     <p><b>Follow us on :<b></p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3icECWzbOBYS_HJeXvCfU6lnWoufMPkogE9kOPKSAjA&s=10"height="200">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTQUkNnhum6kFxXxcWN5qUXHwcfBaV5sqIpmCZyHzncQ&s=10"height="200">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvGzFtoso2E9et1CDtAbAPH7fww1cJvUhdp9nRHEOUKA&s=10"height="200">
+</body>
+</html>
