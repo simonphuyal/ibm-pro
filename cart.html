@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>ShopVerse-Cart</title>
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             padding: 30px;
-            background-color:black;
+            background-color: black;
             color: #333;
         }
-        h1 { margin-bottom: 25px; color: #1a1a1a; }
-        
+
+        h1 {
+            margin-bottom: 25px;
+            color: #1a1a1a;
+        }
+
         .product-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -31,14 +42,16 @@
 
         .card h3 {
             margin: 10px 0;
-            color: #2d3748;
-            }
-        .card p { 
-            font-weight: bold;
-            color: #4a5568; margin-bottom: 15px;
-            }
+            color:  rgb(173, 172, 172);
+        }
 
-   
+        .card p {
+            font-weight: bold;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+
         .button-group {
             display: flex;
             gap: 10px;
@@ -52,11 +65,14 @@
             font-weight: 600;
             cursor: pointer;
             border-radius: 6px;
-            flex: 2; 
+            flex: 2;
         }
-        .btn-add:hover { background: #1d4ed8; }
 
-        
+        .btn-add:hover {
+            background: #1d4ed8;
+        }
+
+
         .btn-remove {
             background: #dc3545;
             color: white;
@@ -67,16 +83,60 @@
             border-radius: 6px;
             flex: 1;
         }
-        .btn-remove:hover { background: #bd2130; }
 
-        a { text-decoration: none; color: #2563eb; font-weight: 600; }
+        .btn-remove:hover {
+            background: #bd2130;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .backbtn{
+            background: linear-gradient(90deg, #00ccff, #4781ff);
+            padding: 0.5rem 1.5rem;
+            color: white;
+            font-size: large;
+            width: 12.5vw;
+            border-radius: 10px;
+            transition: all 0.4s;
+        }
+
+        .backbtn:hover{
+            transform: translateY(-3px);
+        }
+
+        .title{
+            color: white;
+            padding-bottom: 1vh;
+            background: linear-gradient(#ea00ff, #ea00ff) bottom center / 5% 2px no-repeat;
+        }
+        .homebtn{
+            background: linear-gradient(90deg, #00ccff, #4781ff);
+            padding: 0.5rem 1.5rem;
+            color: white;
+            font-size: large;
+            width: 13vw;
+            border-radius: 10px;
+            transition: all 0.4s;
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+        }
+
+        .homebtn:hover{
+            transform: translateY(-3px);
+        }
     </style>
 </head>
+
 <body>
 
-    <a href="index.html">← Back Home</a>
-    <h1><b>Your Cart</b></h1>
-    
+    <a class="backbtn" href="index.html">← Back Home</a>
+    <h1 class="title"><b>Your Cart</b></h1>
+
     <div class="product-list">
         <div class="card">
             <h3>Gaming PC</h3>
@@ -104,7 +164,7 @@
                 <button class="btn-remove" onclick="removeFromCart('monitor-1', 'Gaming Monitor')">X</button>
             </div>
         </div>
-        
+
         <div class="card">
             <h3>Gaming Keyboard</h3>
             <p>Price: $100</p>
@@ -140,7 +200,7 @@
                 <button class="btn-remove" onclick="removeFromCart('PS5-1', 'PS5')">X</button>
             </div>
         </div>
-        
+
         <div class="card">
             <h3>Iphone 17 pro max</h3>
             <p>Price: $1050</p>
@@ -158,7 +218,7 @@
                 <button class="btn-remove" onclick="removeFromCart('Samsung-1', 'Samsung Galaxy S25 Ultra')">X</button>
             </div>
         </div>
-        
+
         <div class="card">
             <h3>Laptop</h3>
             <p>Price: $650</p>
@@ -168,7 +228,7 @@
             </div>
         </div>
 
-         <div class="card">
+        <div class="card">
             <h3>Tab</h3>
             <p>Price: $200</p>
             <div class="button-group">
@@ -177,7 +237,7 @@
             </div>
         </div>
 
-         <div class="card">
+        <div class="card">
             <h3>Smart Watch</h3>
             <p>Price: $200</p>
             <div class="button-group">
@@ -186,18 +246,18 @@
             </div>
         </div>
 
-        
-         <div class="card">
+
+        <div class="card">
             <h3>Ear Pods/h3>
-            <p>Price: $150</p>
-            <div class="button-group">
-                <button class="btn-add" onclick="saveToCart('Ear Pods-1', 'Ear Pods', 150)">Add</button>
-                <button class="btn-remove" onclick="removeFromCart('Ear Pods-1', 'Ear Pods')">X</button>
-            </div>
+                <p>Price: $150</p>
+                <div class="button-group">
+                    <button class="btn-add" onclick="saveToCart('Ear Pods-1', 'Ear Pods', 150)">Add</button>
+                    <button class="btn-remove" onclick="removeFromCart('Ear Pods-1', 'Ear Pods')">X</button>
+                </div>
         </div>
 
-        
-         <div class="card">
+
+        <div class="card">
             <h3>Earphone</h3>
             <p>Price: $50</p>
             <div class="button-group">
@@ -206,7 +266,7 @@
             </div>
         </div>
 
-          <div class="card">
+        <div class="card">
             <h3>Fridge</h3>
             <p>Price: $1550</p>
             <div class="button-group">
@@ -215,8 +275,8 @@
             </div>
         </div>
 
-        
-          <div class="card">
+
+        <div class="card">
             <h3>Washing Machine</h3>
             <p>Price: $1550</p>
             <div class="button-group">
@@ -225,7 +285,7 @@
             </div>
         </div>
 
-          <div class="card">
+        <div class="card">
             <h3>Pan</h3>
             <p>Price: $25</p>
             <div class="button-group">
@@ -234,7 +294,7 @@
             </div>
         </div>
 
-         <div class="card">
+        <div class="card">
             <h3>Oven</h3>
             <p>Price: $750</p>
             <div class="button-group">
@@ -243,7 +303,7 @@
             </div>
         </div>
 
-         <div class="card">
+        <div class="card">
             <h3>Microwave</h3>
             <p>Price: $750</p>
             <div class="button-group">
@@ -252,7 +312,7 @@
             </div>
         </div>
 
-         <div class="card">
+        <div class="card">
             <h3>Chimney</h3>
             <p>Price: $250</p>
             <div class="button-group">
@@ -261,7 +321,7 @@
             </div>
         </div>
 
-           <div class="card">
+        <div class="card">
             <h3>Electric Gas</h3>
             <p>Price: $250</p>
             <div class="button-group">
@@ -270,8 +330,8 @@
             </div>
         </div>
 
-        
-           <div class="card">
+
+        <div class="card">
             <h3>Sofa</h3>
             <p>Price: $950</p>
             <div class="button-group">
@@ -280,8 +340,8 @@
             </div>
         </div>
 
-            
-           <div class="card">
+
+        <div class="card">
             <h3>Bed</h3>
             <p>Price: $950</p>
             <div class="button-group">
@@ -291,8 +351,8 @@
         </div>
 
 
-              
-           <div class="card">
+
+        <div class="card">
             <h3>Dining Table</h3>
             <p>Price: $950</p>
             <div class="button-group">
@@ -301,7 +361,7 @@
             </div>
         </div>
 
-         <div class="card">
+        <div class="card">
             <h3>Cupboard</h3>
             <p>Price: $950</p>
             <div class="button-group">
@@ -310,8 +370,8 @@
             </div>
         </div>
 
-        
-         <div class="card">
+
+        <div class="card">
             <h3>Study Table</h3>
             <p>Price: $950</p>
             <div class="button-group">
@@ -320,7 +380,7 @@
             </div>
         </div>
 
-         <div class="card">
+        <div class="card">
             <h3>Football</h3>
             <p>Price: $50</p>
             <div class="button-group">
@@ -329,7 +389,7 @@
             </div>
         </div>
 
-                <div class="card">
+        <div class="card">
             <h3>Basketball</h3>
             <p>Price: $50</p>
             <div class="button-group">
@@ -338,7 +398,7 @@
             </div>
         </div>
 
-           <div class="card">
+        <div class="card">
             <h3>Cricket Set</h3>
             <p>Price: $100</p>
             <div class="button-group">
@@ -351,22 +411,24 @@
             <h3>American Football</h3>
             <p>Price: $50</p>
             <div class="button-group">
-                <button class="btn-add" onclick="saveToCart('American Football-1', 'American Football', 50)">Add</button>
-                <button class="btn-remove" onclick="removeFromCart('American Football-1', 'American Football')">X</button>
+                <button class="btn-add"
+                    onclick="saveToCart('American Football-1', 'American Football', 50)">Add</button>
+                <button class="btn-remove"
+                    onclick="removeFromCart('American Football-1', 'American Football')">X</button>
             </div>
         </div>
     </div>
 
     <script>
-   
+
         function saveToCart(id, name, price) {
             let myCart = JSON.parse(localStorage.getItem('myCartData')) || [];
             let foundItem = myCart.find(item => item.id === id);
 
             if (foundItem) {
-                foundItem.quantity += 1; 
+                foundItem.quantity += 1;
             } else {
-                myCart.push({ id, name, price, quantity: 1 }); 
+                myCart.push({ id, name, price, quantity: 1 });
             }
             localStorage.setItem('myCartData', JSON.stringify(myCart));
             alert(name + " added!");
@@ -374,30 +436,31 @@
 
 
         function removeFromCart(id, name) {
-            
+
             let myCart = JSON.parse(localStorage.getItem('myCartData')) || [];
-            
-            
+
+
             let foundItem = myCart.find(item => item.id === id);
 
             if (foundItem) {
-                
+
                 foundItem.quantity -= 1;
 
-             
+
                 if (foundItem.quantity <= 0) {
                     myCart = myCart.filter(item => item.id !== id);
                 }
 
-            
+
                 localStorage.setItem('myCartData', JSON.stringify(myCart));
                 alert(name + " removed!");
             } else {
-            
+
                 alert(name + " is not in your cart!");
             }
         }
     </script>
-    <a href="home.html">Home Delivery</a>
-    </body>
+    <a class="homebtn" href="home.html">Home Delivery</a>
+</body>
+
 </html>
